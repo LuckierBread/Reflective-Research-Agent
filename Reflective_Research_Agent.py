@@ -61,20 +61,24 @@ def revise_draft(original_draft: str, reflection: str, model: str = "openai:gpt-
 
     return response.choices[0].message.content
 
-#Finally lets run the whole thing an see how it works
-essay_prompt = "Should social media platforms be regulated by the government?"
+def main():
+    #Finally lets run the whole thing an see how it works
+    essay_prompt = input("Enter your research topic:")
+    
+    # Agent 1 – Draft
+    draft = generate_draft(essay_prompt)
+    print("\nDraft:\n")
+    print(draft)
 
-# Agent 1 – Draft
-draft = generate_draft(essay_prompt)
-print("📝 Draft:\n")
-print(draft)
+    # Agent 2 – Reflection
+    feedback = reflect_on_draft(draft)
+    print("\nFeedback:\n")
+    print(feedback)
 
-# Agent 2 – Reflection
-feedback = reflect_on_draft(draft)
-print("\n🧠 Feedback:\n")
-print(feedback)
-
-# Agent 3 – Revision
-revised = revise_draft(draft, feedback)
-print("\n✍️ Revised:\n")
-print(revised)
+    # Agent 3 – Revision
+    revised = revise_draft(draft, feedback)
+    print("\nRevised:\n")
+    print(revised)
+    
+    if __name__ == "__main___":
+        main()
