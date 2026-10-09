@@ -24,12 +24,14 @@ def generate_draft(topic: str, model: str = "openai:gpt-4o") -> str:
 def reflect_on_draft(draft: str, model: str = "openai:o4-mini") -> str:
 
     # Define how we want the LLM to reflect on it's work.
-    prompt = f"""You are a fact checker and essay reviewer. 
-    review the essay for factual accuracy as well as professional tone
-    and ensure that there are no unintended readings such as sexual inuendos,
+    prompt = f"""You are an essay reviewer. 
+    review the essay for questionable claims and professional tone.
+    Also ensure that there are no unintended readings such as sexual inuendos,
     or culturally insensitive wording.
     
-    Provide a one paragraph feedback for the auther
+    Provide a list of possible improvments for the auther in the following format:
+    Severity:() Issue:() Proposed Fix: 
+    
     Review this essay: {draft}"""
 
     # Get a response from the LLM by creating a chat with the client.
