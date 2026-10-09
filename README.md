@@ -18,6 +18,6 @@ The aim of the Reflection design pattern is to mimic this behavour using LLM sys
 
 The Reflection pattern provides several meaningful benifits. Firstly is the notable improvement on an LLMs ability to complete a given task. Benchmarking has shown that in many cases a small or early gen model using reflection has the potential to outperform larger and more advanced models that only use a single prompt.
 
-![Reflection output quality improvements](Reflection Quality.png)
+![Reflection output quality improvements](Reflection_Quality.png)
 
 Not only are these preformance improvments desirable from a task completion quality standpoint. they can also allow use of simpler and less expensive models for use in tasks that would otherwise require more advanced models.
