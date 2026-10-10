@@ -28,5 +28,5 @@ Not only are these preformance improvments desirable from a task completion qual
 3. Start the venv by running ```.\.venv\Scripts\Activate.ps1```
 4. Install the requirements by running ```pip install requirements.txt```
 5. Create a file in the root of your folder called .env and put the following line inside.
- ```OPENAI_API_KEY = "Whatever your API key is"
+ ```OPENAI_API_KEY = "Whatever your API key is"```
  6. Run it and collect your essay. 
