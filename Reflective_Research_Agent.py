@@ -80,5 +80,5 @@ def main():
     print("\nRevised:\n")
     print(revised)
     
-    if __name__ == "__main___":
-        main()
+if __name__ == "__main__":
+    main()
