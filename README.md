@@ -22,11 +22,11 @@ The Reflection pattern provides several meaningful benifits. Firstly is the nota
 
 Not only are these preformance improvments desirable from a task completion quality standpoint. they can also allow use of simpler and less expensive models for use in tasks that would otherwise require more advanced models.
 
-## How you can try it yourself
-Step 1: Clone the repo to your computer. Make sure you have Python 3.13 or higher installed.
-Step 2: Create a virtual environment in the cloned folder with ```Python -m .venv venv```
-Step 3: Start the venv by running ```.\.venv\Scripts\Activate.ps1```
-Step 4: Install the requirements by running ```pip install requirements.txt```
-Step 5: Create a file in the root of your folder called .env and put the following line inside.
+## Try it yourself with the following steps
+1. Clone the repo to your computer. Make sure you have Python 3.13 or higher installed.
+2. Create a virtual environment in the cloned folder with ```Python -m .venv venv```
+3. Start the venv by running ```.\.venv\Scripts\Activate.ps1```
+4. Install the requirements by running ```pip install requirements.txt```
+5. Create a file in the root of your folder called .env and put the following line inside.
  ```OPENAI_API_KEY = "Whatever your API key is"
-Step 6: Run it and collect your essay. 
+ 6. Run it and collect your essay. 
