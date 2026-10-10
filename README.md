@@ -1,5 +1,5 @@
 # What is the the Reflection Design Pattern
-The Reflection design pattern is a method of prompting LLM systems that allows them to seperate their thought into stages much like a person would. 
+The Reflection design pattern is a method of prompting LLM systems that allows them to seperate their thought into stages much like a person would. Improving the results of generation signifigantly.
 
 ## How does it work
 If we asked a person to write an essay about a given topic they could produce an essay. While it does technically complete the task often times, first drafts have errors or other kinds of flaws, perhaps don't flow the way that the auther would have liked or upon second reading an unintended interpretation becomes obvious.
