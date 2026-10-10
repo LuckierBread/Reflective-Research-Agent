@@ -62,23 +62,36 @@ def revise_draft(original_draft: str, reflection: str, model: str = "openai:gpt-
     return response.choices[0].message.content
 
 def main():
-    #Finally lets run the whole thing an see how it works
-    essay_prompt = input("Enter your research topic:")
+    try:
+        if not os.getenv("OPENAI_API_KEY"):
+            raise ValueError("OPENAI_API_KEY is missing.")
+        
+        #Finally lets run the whole thing an see how it works
+        essay_prompt = input("Enter your research topic:").strip()
+        
+        if not essay_prompt:
+            raise ValueError("Topic can not be empty.")
     
-    # Agent 1 – Draft
-    draft = generate_draft(essay_prompt)
-    print("\nDraft:\n")
-    print(draft)
+        # Agent 1 – Draft
+        draft = generate_draft(essay_prompt)
+        print("\nDraft:\n")
+        print(draft)
 
-    # Agent 2 – Reflection
-    feedback = reflect_on_draft(draft)
-    print("\nFeedback:\n")
-    print(feedback)
+        # Agent 2 – Reflection
+        feedback = reflect_on_draft(draft)
+        print("\nFeedback:\n")
+        print(feedback)
 
-    # Agent 3 – Revision
-    revised = revise_draft(draft, feedback)
-    print("\nRevised:\n")
-    print(revised)
-    
+        # Agent 3 – Revision
+        revised = revise_draft(draft, feedback)
+        print("\nRevised:\n")
+        print(revised)
+        
+    except ValueError as e:
+        print(f"Input/configuration error: {e}")
+        
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
 if __name__ == "__main__":
     main()
